@@ -21,22 +21,24 @@ export default function Home() {
   return (
     <main data-screen-label="TOP">
       <section
-        className="hero"
         style={{
           position: 'relative',
           backgroundColor: 'var(--color-neutral-800)',
           backgroundImage: `linear-gradient(to top,rgba(14,22,36,.66) 0%,rgba(14,22,36,.34) 38%,rgba(14,22,36,.06) 70%,transparent 100%),url(${heroImage})`,
+          backgroundSize: 'cover,cover',
+          backgroundPosition: '50% 100%,50% 100%',
+          backgroundRepeat: 'no-repeat,no-repeat',
           borderBottom: '1px solid var(--color-divider)',
           display: 'flex',
           alignItems: 'flex-end',
-          minHeight: 'calc(100vh - 64px)',
+          minHeight: 'min(80vh,760px)',
         }}
       >
         <div style={{ width: '100%', maxWidth: 1200, margin: '0 auto', padding: 'clamp(72px,12vw,160px) clamp(20px,5vw,72px) clamp(40px,5vw,72px)' }}>
           <p style={{ fontSize: 11.5, letterSpacing: '.22em', textTransform: 'uppercase', color: '#fff', margin: '0 0 32px', textShadow: '0 1px 12px rgba(20,30,45,.55)' }}>
             Management Consulting
           </p>
-          <h1 style={{ fontFamily: 'var(--font-heading)', fontWeight: 400, fontSize: 'clamp(17px,5vw,70px)', lineHeight: 1.32, letterSpacing: '.04em', margin: 0, whiteSpace: 'nowrap', color: '#fff', textShadow: '0 2px 20px rgba(20,30,45,.5)' }}>
+          <h1 style={{ fontFamily: 'var(--font-heading)', fontWeight: 400, fontSize: 'clamp(36px,5.4vw,74px)', lineHeight: 1.32, letterSpacing: '.04em', margin: 0, maxWidth: '15em', color: '#fff', textShadow: '0 2px 20px rgba(20,30,45,.5)' }}>
             企業の可能性を、次の領域へ。
           </h1>
           <p style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(17px,1.8vw,24px)', letterSpacing: '.06em', color: '#fff', margin: '20px 0 0', textShadow: '0 1px 14px rgba(14,22,36,.7)' }}>
