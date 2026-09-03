@@ -63,3 +63,19 @@ a:hover {
   color: var(--color-accent-700);
   box-shadow: inset 0 -1px 0 var(--color-accent);
 }
+
+/* Hero background: mobile crops toward the bottom (foliage) since the
+   narrow, tall viewport keeps most of the towers in frame anyway. Wide
+   PC viewports are proportionally much shorter than the 3:2 photo, so
+   a bottom anchor there crops away the towers/sky the shot is about —
+   shift the anchor up so cover still shows them. */
+.hero {
+  background-size: cover, cover;
+  background-position: 50% 100%, 50% 100%;
+  background-repeat: no-repeat, no-repeat;
+}
+@media (min-width: 900px) {
+  .hero {
+    background-position: 50% 15%, 50% 15%;
+  }
+}

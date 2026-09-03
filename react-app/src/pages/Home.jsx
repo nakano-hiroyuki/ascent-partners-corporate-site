@@ -21,13 +21,11 @@ export default function Home() {
   return (
     <main data-screen-label="TOP">
       <section
+        className="hero"
         style={{
           position: 'relative',
           backgroundColor: 'var(--color-neutral-800)',
           backgroundImage: `linear-gradient(to top,rgba(14,22,36,.66) 0%,rgba(14,22,36,.34) 38%,rgba(14,22,36,.06) 70%,transparent 100%),url(${heroImage})`,
-          backgroundSize: 'cover,cover',
-          backgroundPosition: '50% 100%,50% 100%',
-          backgroundRepeat: 'no-repeat,no-repeat',
           borderBottom: '1px solid var(--color-divider)',
           display: 'flex',
           alignItems: 'flex-end',
