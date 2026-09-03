@@ -73,9 +73,13 @@ a:hover {
   background-size: cover, cover;
   background-position: 50% 100%, 50% 100%;
   background-repeat: no-repeat, no-repeat;
+  min-height: min(80vh, 760px);
 }
 @media (min-width: 900px) {
   .hero {
     background-position: 50% 15%, 50% 15%;
+    /* Match the sticky header's rendered height so hero + header fill
+       exactly one screen on desktop, instead of the shorter mobile cap. */
+    min-height: calc(100vh - 64px);
   }
 }
