@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/classical-a42713a1-90eb-46fe-bb93-bd273c14a4b9/styles.css">
+<script src="_ds/classical-a42713a1-90eb-46fe-bb93-bd273c14a4b9/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Lora:wght@400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--font-heading:'Cormorant Garamond','Shippori Mincho',serif;--font-body:'Lora','Shippori Mincho',serif;
+  /* white / blue / cool-grey re-grade: the system's ramps rebuilt in OKLCH at the
+     same lightness steps, hue rotated to blue and the neutrals cooled. */
+  --color-bg:#fff;
+  --color-surface:oklch(0.978 0.007 250);
+  --color-text:oklch(0.26 0.014 250);
+  --color-divider:color-mix(in srgb, oklch(0.46 0.012 250) 22%, transparent);
+  --color-neutral-100:oklch(0.975 0.004 250);
+  --color-neutral-200:oklch(0.945 0.006 250);
+  --color-neutral-300:oklch(0.885 0.008 250);
+  --color-neutral-400:oklch(0.800 0.010 250);
+  --color-neutral-500:oklch(0.685 0.010 250);
+  --color-neutral-600:oklch(0.575 0.012 250);
+  --color-neutral-700:oklch(0.460 0.012 250);
+  --color-neutral-800:oklch(0.340 0.012 250);
+  --color-neutral-900:oklch(0.245 0.012 250);
+  --color-accent:oklch(0.560 0.125 250);
+  --color-accent-100:oklch(0.960 0.020 250);
+  --color-accent-200:oklch(0.910 0.040 250);
+  --color-accent-300:oklch(0.855 0.060 250);
+  --color-accent-400:oklch(0.775 0.080 250);
+  --color-accent-500:oklch(0.685 0.110 250);
+  --color-accent-600:oklch(0.585 0.130 250);
+  --color-accent-700:oklch(0.475 0.120 250);
+  --color-accent-800:oklch(0.360 0.100 250);
+  --color-accent-900:oklch(0.260 0.070 250);
+  --color-accent-2:oklch(0.560 0.125 250);
+  --color-accent-2-100:oklch(0.960 0.020 250);
+  --color-accent-2-200:oklch(0.910 0.040 250);
+  --color-accent-2-300:oklch(0.855 0.060 250);
+  --color-accent-2-400:oklch(0.775 0.080 250);
+  --color-accent-2-500:oklch(0.685 0.110 250);
+  --color-accent-2-600:oklch(0.585 0.130 250);
+  --color-accent-2-700:oklch(0.475 0.120 250);
+  --color-accent-2-800:oklch(0.360 0.100 250);
+  --color-accent-2-900:oklch(0.260 0.070 250);}
+body{margin:0;text-wrap:pretty;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-feature-settings:'lnum' 1;}
+a{color:var(--color-accent-700);text-decoration:none;}
+a:hover{color:var(--color-accent);}
+.nav a[aria-current="page"]{color:var(--color-accent-700);box-shadow:inset 0 -1px 0 var(--color-accent);}
+</style>
+</helmet>
+<nav class="nav" style="padding-inline:clamp(20px,5vw,72px);gap:clamp(12px,2.2vw,30px)">
+  <a href="index.dc.html" class="nav-brand" style="display:grid;gap:4px;color:var(--color-text);box-shadow:none">
+    <span style="font-family:var(--font-heading);font-size:21px;letter-spacing:.14em;line-height:1">ASCENT PARTNERS</span>
+    <span style="font-size:10.5px;letter-spacing:.22em;color:color-mix(in srgb,var(--color-text) 55%,transparent);line-height:1">株式会社アセントパートナーズ</span>
+  </a>
+  <a href="index.dc.html" aria-current="{{ curTop }}" style="font-size:13px;letter-spacing:.1em;color:var(--color-text)">TOP</a>
+  <a href="about.dc.html" aria-current="{{ curAbout }}" style="font-size:13px;letter-spacing:.1em;color:var(--color-text)">ABOUT</a>
+  <a href="service.dc.html" aria-current="{{ curService }}" style="font-size:13px;letter-spacing:.1em;color:var(--color-text)">SERVICE</a>
+  <a href="works.dc.html" aria-current="{{ curWorks }}" style="font-size:13px;letter-spacing:.1em;color:var(--color-text)">WORKS</a>
+  <a href="contact.dc.html" class="btn btn-primary" style="font-size:12.5px;letter-spacing:.08em">ご相談・お問い合わせ</a>
+</nav>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:88},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;top&quot;,&quot;about&quot;,&quot;service&quot;,&quot;works&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;top&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const a = this.props.active || 'top';
+    const c = (k) => (a === k ? 'page' : undefined);
+    return { curTop: c('top'), curAbout: c('about'), curService: c('service'), curWorks: c('works'), curContact: c('contact') };
+  }
+}
+
+</script>
+</body>
+</html>
